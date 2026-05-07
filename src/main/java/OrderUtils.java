@@ -1,6 +1,7 @@
-class OrderProcessor {
+class OrderUtils {
 
-    public double calculateTotal(Order order) {
+    // Utility method مشتركة
+    public static double calculateTotal(Order order) {
 
         double total = 0;
 
