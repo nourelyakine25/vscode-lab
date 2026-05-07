@@ -1,28 +1,16 @@
 public class PaymentProcessor {
 
-    public void processPayment(
-            String paymentMethod,
-            double amount
+    private PaymentStrategy paymentStrategy;
+
+    public void setPaymentStrategy(
+            PaymentStrategy paymentStrategy
     ) {
 
-        // if else كثيرة
-        if (paymentMethod.equals("CreditCard")) {
+        this.paymentStrategy = paymentStrategy;
+    }
 
-            System.out.println(
-                    "Processing credit card payment"
-            );
+    public void processPayment(double amount) {
 
-        } else if (paymentMethod.equals("PayPal")) {
-
-            System.out.println(
-                    "Processing PayPal payment"
-            );
-
-        } else {
-
-            System.out.println(
-                    "Processing Bitcoin payment"
-            );
-        }
+        paymentStrategy.pay(amount);
     }
 }
