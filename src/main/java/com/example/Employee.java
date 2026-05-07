@@ -1,14 +1,4 @@
-public class Employee {
+abstract class Employee {
 
-    public double calculateBonus(String type) {
-
-        if (type.equals("Manager")) {
-            return 5000;
-
-        } else if (type.equals("Developer")) {
-            return 3000;
-        }
-
-        return 1000;
-    }
+    abstract double calculateBonus();
 }
